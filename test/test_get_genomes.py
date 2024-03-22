@@ -8,7 +8,7 @@ def test_main(tmp_path):
     data_dir = tmp_path / "data"
     shutil.copytree(Path(__file__).parent / "data", data_dir)
     result = subprocess.run(
-        f"get_genomes {data_dir} hlorente {data_dir}/query.txt --genomic",
+        f"get_genomes {data_dir} hlorente {data_dir}/query.txt ",
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
